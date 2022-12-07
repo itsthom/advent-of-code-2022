@@ -33,7 +33,7 @@ describe('elfCalorieSum', () => {
   })
 })
 
-describe('highestCalElf', () => {
+describe('highestCalElves', () => {
   test('with sample input', () => {
     const input =
       `1000
@@ -50,6 +50,6 @@ describe('highestCalElf', () => {
       9000
 
       10000`
-    expect(day1.highestCalElf(input)).toBe(24000)
+    expect(day1.highestCalElves(input, 1)).toBe(24000)
   })
 })

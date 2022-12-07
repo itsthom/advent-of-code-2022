@@ -5,18 +5,19 @@ function elfCalorieSum (calories) {
     .reduce((acc, curr) => acc + curr)
 }
 
-function highestCalElf (input) {
+function highestCalElves (input, elves) {
   return input.split('\n\n')
     .map(x => elfCalorieSum(x))
     .sort((a, b) => a - b)
-    .pop()
+    .slice(-1 * elves)
+    .reduce((acc, curr) => acc + curr)
 }
 
 function solution (input) {
   return {
-    part1: highestCalElf(input),
-    part2: '???'
+    part1: highestCalElves(input, 1),
+    part2: highestCalElves(input, 3)
   }
 }
 
-export { elfCalorieSum, highestCalElf, solution }
+export { elfCalorieSum, highestCalElves, solution }
