@@ -1,4 +1,4 @@
-# Advent of Code 2020!
+# Advent of Code 2022!
 
 Let's try this again! https://adventofcode.com
 
