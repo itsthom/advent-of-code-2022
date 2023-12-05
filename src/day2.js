@@ -45,10 +45,22 @@ function sumPossibleIds (input) {
     .reduce((acc, obj) => acc + obj.id, 0)
 }
 
+function gamePower (game) {
+  return game.red * game.blue * game.green
+}
+
+function sumPowers (input) {
+  return input.split('\n')
+    .filter(str => str.length > 0)
+    .map(str => createGame(str))
+    .map(game => gamePower(game))
+    .reduce((acc, obj) => acc + obj, 0)
+}
+
 function solution (input) {
   return {
     part1: sumPossibleIds(input),
-    part2: '???'
+    part2: sumPowers(input)
   }
 }
 
