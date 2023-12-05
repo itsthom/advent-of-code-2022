@@ -1,55 +1,12 @@
 import * as day1 from '../src/day1.js'
 
-describe('elfCalorieSum', () => {
+describe('calibrationValue', () => {
   test('first sample elf', () => {
     const input =
-    `1000
-    2000
-    3000`
-    expect(day1.elfCalorieSum(input)).toBe(6000)
-  })
-  test('second sample elf', () => {
-    const input =
-    '4000'
-    expect(day1.elfCalorieSum(input)).toBe(4000)
-  })
-  test('third sample elf', () => {
-    const input =
-    `5000
-    6000`
-    expect(day1.elfCalorieSum(input)).toBe(11000)
-  })
-  test('fourth sample elf', () => {
-    const input =
-    `7000
-    8000
-    9000`
-    expect(day1.elfCalorieSum(input)).toBe(24000)
-  })
-  test('fifth sample elf', () => {
-    const input =
-    '10000'
-    expect(day1.elfCalorieSum(input)).toBe(10000)
-  })
-})
-
-describe('highestCalElves', () => {
-  test('with sample input', () => {
-    const input =
-      `1000
-      2000
-      3000
-
-      4000
-
-      5000
-      6000
-
-      7000
-      8000
-      9000
-
-      10000`
-    expect(day1.highestCalElves(input, 1)).toBe(24000)
+    `1abc2
+    pqr3stu8vwx
+    a1b2c3d4e5f
+    treb7uchet`
+    expect(day1.calibrationValue(input)).toBe(142)
   })
 })

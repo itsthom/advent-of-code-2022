@@ -1,4 +1,4 @@
-# Advent of Code 2022!
+# Advent of Code 2023!
 
 Let's try this again! https://adventofcode.com
 
@@ -13,7 +13,7 @@ yarn install
 ```
 Usage: yarn advent <command>
 
-~~ Your friendly neighborhood Advent of Code 2020 runner ~~
+~~ Your friendly neighborhood Advent of Code runner ~~
 
 Commands:
   all             Run solution for every day

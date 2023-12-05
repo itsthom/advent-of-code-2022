@@ -1,23 +1,16 @@
-function elfCalorieSum (calories) {
-  return calories.split('\n')
-    .filter(x => x !== '')
-    .map(x => parseInt(x, 10))
-    .reduce((acc, curr) => acc + curr)
-}
-
-function highestCalElves (input, elves) {
-  return input.split('\n\n')
-    .map(x => elfCalorieSum(x))
-    .sort((a, b) => a - b)
-    .slice(-1 * elves)
-    .reduce((acc, curr) => acc + curr)
+function calibrationValue (input) {
+  return input.split('\n')
+    .map(s => s.match(/\d/g))
+    .filter(a => a !== null)
+    .map(a => parseInt(a[0] + a[a.length - 1], 10))
+    .reduce((a, b) => a + b, 0)
 }
 
 function solution (input) {
   return {
-    part1: highestCalElves(input, 1),
-    part2: highestCalElves(input, 3)
+    part1: calibrationValue(input),
+    part2: '???'
   }
 }
 
-export { elfCalorieSum, highestCalElves, solution }
+export { calibrationValue, solution }

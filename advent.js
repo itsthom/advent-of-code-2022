@@ -2,7 +2,6 @@ import * as repl from 'repl'
 import { readInput } from './reader.js'
 import * as d0 from './src/day0.js'
 import * as d1 from './src/day1.js'
-import * as d2 from './src/day2.js'
 
 // yarn and node's native ESM support don't quite play nice yet :(
 import { createRequire } from 'module'
@@ -13,8 +12,7 @@ const program = require('commander').program
 
 const solutions = {
   day0: { mod: d0, input: 'day0.txt' },
-  day1: { mod: d1, input: 'day1.txt' },
-  day2: { mod: d2, input: 'day2.txt' }
+  day1: { mod: d1, input: 'day1.txt' }
 }
 
 const solutionKeys = Object.keys(solutions)
@@ -49,7 +47,7 @@ function replTime () {
 }
 
 program
-  .description(chalk.green.italic('~~ Your friendly neighborhood Advent of Code 2020 runner ~~'))
+  .description(chalk.green.italic('~~ Your friendly neighborhood Advent of Code runner ~~'))
   .usage(chalk.yellow('<command>'))
 
 program
