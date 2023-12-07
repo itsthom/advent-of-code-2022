@@ -4,6 +4,7 @@ import * as d0 from './src/day0.js'
 import * as d1 from './src/day1.js'
 import * as d2 from './src/day2.js'
 import * as d3 from './src/day3.js'
+import * as d4 from './src/day4.js'
 
 // yarn and node's native ESM support don't quite play nice yet :(
 import { createRequire } from 'module'
@@ -16,7 +17,8 @@ const solutions = {
   day0: { mod: d0, input: 'day0.txt' },
   day1: { mod: d1, input: 'day1.txt' },
   day2: { mod: d2, input: 'day2.txt' },
-  day3: { mod: d3, input: 'day3.txt' }
+  day3: { mod: d3, input: 'day3.txt' },
+  day4: { mod: d4, input: 'day4.txt' }
 }
 
 const solutionKeys = Object.keys(solutions)
